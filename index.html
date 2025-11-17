@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>tydus.net | Prototype Lab</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: hsl(230, 30%, 8%);
+        --card: hsla(0, 0%, 100%, 0.06);
+        --text: hsl(0, 0%, 100%);
+        --muted: hsla(0, 0%, 100%, 0.7);
+        --accent: hsl(201, 88%, 60%);
+        font-family: "Inter", "Helvetica Neue", system-ui, -apple-system, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: radial-gradient(circle at top, hsla(201, 88%, 60%, 0.35), transparent),
+          var(--bg);
+        color: var(--text);
+        padding: 2rem;
+      }
+
+      main {
+        width: min(640px, 100%);
+        background: var(--card);
+        border: 1px solid hsla(0, 0%, 100%, 0.08);
+        border-radius: 16px;
+        padding: 2.5rem;
+        backdrop-filter: blur(12px);
+        text-align: center;
+        box-shadow: 0 20px 60px hsla(230, 70%, 5%, 0.55);
+      }
+
+      h1 {
+        margin: 0 0 1rem;
+        font-size: clamp(2rem, 5vw, 2.75rem);
+        letter-spacing: 0.02em;
+      }
+
+      p {
+        margin: 0 auto 1.75rem;
+        max-width: 42ch;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.4rem 0.9rem;
+        border-radius: 999px;
+        background: hsla(201, 88%, 60%, 0.14);
+        color: var(--accent);
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.4rem;
+        margin-top: 1rem;
+        padding: 0.9rem 1.6rem;
+        border-radius: 999px;
+        border: 1px solid hsla(0, 0%, 100%, 0.2);
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 600;
+        transition: transform 200ms ease, border-color 200ms ease;
+      }
+
+      .cta:hover {
+        transform: translateY(-2px);
+        border-color: var(--accent);
+      }
+
+      footer {
+        margin-top: 2.5rem;
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+
+      @media (max-width: 480px) {
+        main {
+          padding: 2rem 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>tydus.net</h1>
+      <p>
+        This is a holding site for James Read's various projects.
+      </p>
+      <p>
+        If you're viewing this page directly, you're probably looking for one of his projects under a subdirectory, or you may have a broken link.
+      </p>
+      <a class="cta" href="https://jread.com">Who is James Read?</a>
+
+      <footer>
+        tydus <span id="year">
+        </span> 
+        <br />
+        <br />
+        reinvent wheels, freely, for fun and zero profit. <br />
+        </footer>
+    </main>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
+
