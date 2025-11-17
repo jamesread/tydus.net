@@ -88,6 +88,46 @@
         border-color: var(--accent);
       }
 
+      .previews {
+        margin: 2.5rem auto 0;
+        text-align: left;
+        max-width: 480px;
+      }
+
+      .previews h2 {
+        margin-bottom: 0.75rem;
+        font-size: 1rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .preview-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid hsla(0, 0%, 100%, 0.12);
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      .preview-list a {
+        display: block;
+        padding: 0.9rem 1.1rem;
+        color: var(--text);
+        text-decoration: none;
+        border-bottom: 1px solid hsla(0, 0%, 100%, 0.06);
+        transition: background 150ms ease;
+      }
+
+      .preview-list a:last-child {
+        border-bottom: none;
+      }
+
+      .preview-list a:hover {
+        background: hsla(0, 0%, 100%, 0.05);
+      }
+
       footer {
         margin-top: 2.5rem;
         font-size: 0.85rem;
@@ -107,9 +147,21 @@
       <p>
         This is a holding site for James Read's various projects.
       </p>
-      <p>
-        If you're viewing this page directly, you're probably looking for one of his projects under a subdirectory, or you may have a broken link.
-      </p>
+
+      <section class="previews" aria-label="Available public previews">
+        <h2>Available Public Previews</h2>
+        <div class="preview-list">
+          <a href="/fosm-site">FOSM Site</a>
+          <a href="https://demo.jread.com" target="_blank" rel="noreferrer noopener"
+            >Demo Apps</a
+          >
+        </div>
+      </section>
+      <section class="previews" aria-label="Private previews">
+        <h2>Private Previews</h2>
+        <p>This site also hosts many other apps, which are in private preview and not in the list above. If you have lost your invite, please contact James Read.</p>
+      </section>
+
       <a class="cta" href="https://jread.com">Who is James Read?</a>
 
       <footer>
